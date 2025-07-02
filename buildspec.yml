@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto21
+    commands:
+      - echo "Instalando dependências..."
+  build:
+    commands:
+      - echo "Construindo aplicação Java"
+      - mvn clean install
+
+artifacts:
+  files:
+    - target/*.jar
